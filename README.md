@@ -1,7 +1,7 @@
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green?style=flat-square)](https://www.paypal.me/gagebenne)
 [![PyPI](https://img.shields.io/pypi/v/pydexcom?style=flat-square)](https://www.pypi.org/project/pydexcom)
 
-*Note: this custom integration is currently under review by the folks at Home Assistant, hopefully you'll see this integration released officially in the next cycle!*
+*Note: this custom integration has been approved by the folks at Home Assistant, and this integration was released officially in Home Assistant .113!*
 
 [![GitHub issue/pull request detail](https://img.shields.io/github/pulls/detail/state/home-assistant/core/33852?style=flat-square)](https://github.com/home-assistant/core/pull/33852)
 [![GitHub issue/pull request detail](https://img.shields.io/github/pulls/detail/last-update/home-assistant/core/33852?style=flat-square)](https://github.com/home-assistant/core/pull/33852)
@@ -17,32 +17,19 @@ The `dexcom` integration allows you to view your CGM data from [Dexcom](https://
 
 **As a custom integration, you will need to copy the `/dexcom` directory to `homeassistant/custom_components` to load it.**
 
-You will need to setup the [Dexcom Share](https://provider.dexcom.com/education-research/cgm-education-use/videos/setting-dexcom-share-and-follow) feature in your Dexcom G6 App to use this integration. Once you have done that, perform the following steps.
+You will need to set up the [Dexcom Share](https://provider.dexcom.com/education-research/cgm-education-use/videos/setting-dexcom-share-and-follow) feature in your Dexcom G6 App to use this integration. Once you have done that, perform the following steps.
+
+**Some people have had problems with connecting when their Dexcom passwords are entirely numeric. If you have connection issues in that case, try changing your password to something with a mix of numbers and letters.**
 
 To add `Dexcom` to your installation, go to **Configuration** >> **Integrations** in the UI, click the button with `+` sign and from the list of integrations select **Dexcom**.
 
-Alternatively, add the following to your `configuration.yaml` file:
+#### Server
 
-```yaml
-# Example configuration.yaml entry
-dexcom:
-  username: YOUR_USERNAME
-  password: YOUR_PASSWORD
-```
+There are two Dexcom Share servers, `US` for United States customers, and `OUS` for all customers outside of the United States.
 
-```yaml
-username:
-  description: The username for accessing your Dexcom account.
-  required: true
-  type: string
-```
+#### Unit of measurement
 
-```yaml
-password:
-  description: The password for accessing your Dexcom account.
-  required: true
-  type: string
-```
+The integrations allows both `md/dL` and `mmol/l` units of measurement for blood glucose values. To change your preferred unit of measurement, got to **Configuration** >> **Integrations** in the UI, and click `OPTIONS`.
 
 ### Sensor
 
