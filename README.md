@@ -9,7 +9,7 @@
 
 # home-assistant-dexcom
 
-The `dexcom` integration allows you to view your CGM data from [Dexcom](https://www.dexcom.com/) in Home Assistant.
+The `Dexcom` integration allows you to view your CGM data from [Dexcom](https://www.dexcom.com/) in Home Assistant.
 
 ![p](https://user-images.githubusercontent.com/22921548/81246424-8d5a2780-8fe5-11ea-85f1-105a7ca6461b.png)
 
